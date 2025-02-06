@@ -62,7 +62,7 @@ console.log('OAuth Config:', oauthConfig); // Debug log to verify config
 
 // GET endpoint to initiate OAuth flow
 router.get('/api/oauth/authorize', (req, res) => {
-    console.log('authorize', req.query);
+    //console.log('authorize', req.query);
     const { response_type, client_id, redirect_uri, state } = req.query;
     
     // Validate required parameters
@@ -96,8 +96,8 @@ router.get('/api/oauth/authorize', (req, res) => {
 
 // POST endpoint to exchange authorization code for tokens
 router.post('/api/oauth/token', async (req, res) => {
-    console.log('token', req.body);
-    console.log("oauthConfig", oauthConfig);
+    // console.log('token', req.body);
+    // console.log("oauthConfig", oauthConfig);
     const { grant_type, code, client_id, redirect_uri } = req.body;
 
     // Validate required parameters
